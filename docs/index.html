@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Serap Erkan" />
+    <meta name="description" content="js-training  | HTML, CSS & JS" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/utilities.css" />
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="32" />
+    <title>js-register</title>
+  </head>
+
+  <body>
+    <div class="container flex text-white">
+      <div class="box">
+        <form autocomplete="off">
+          <h2 class="font-xl fw-6 text-theme text-center">Sign In</h2>
+
+          <div class="inputBox" id="box-1">
+            <input
+              type="text"
+              required
+              minlength="3"
+              maxlength="10"
+              id="input-1"
+            />
+            <span>User Name</span>
+            <i></i>
+          </div>
+          <b id="b-1"></b>
+
+          <div class="inputBox" id="box-2">
+            <input type="email" required email id="input-2" />
+            <span>Email</span>
+            <i></i>
+          </div>
+          <b id="b-2"></b>
+
+          <div class="inputBox" id="box-3">
+            <input
+              type="password"
+              required
+              minlength="5"
+              maxlength="8"
+              id="input-3"
+            />
+            <span>Password</span>
+            <i></i>
+          </div>
+          <div id="errDiv" class="errDiv">
+            <b id="be-0" class="bold"
+              >*Lütfen bu metni 5 karakter veya daha fazla olacak şekilde
+              uzatın.
+            </b>
+            <b id="be-1" class="bold">* Parola küçük harf içermelidir. </b>
+            <b id="be-2" class="bold">* Parola büyük harf içermelidir. </b>
+            <b id="be-3" class="bold">* Parola rakam içermelidir.</b>
+            <b id="be-4" class="bold">* Parola özel karakter içermelidir.</b>
+          </div>
+
+          <div class="inputBox rePassword" id="box-4">
+            <input
+              type="password"
+              required
+              minlength="5"
+              maxlength="8"
+              id="input-4"
+            />
+            <span>Re-Password</span>
+            <i></i>
+          </div>
+          <b id="b-4"></b>
+
+          <div class="inputBox-radio fw-6">
+            <span class="text-capitalize font-sm">Gender</span>
+
+            <input type="radio" id="gender-male" name="gender" required />
+            <label for="gender-male"></label>
+            <label for="gender-male">Male</label>
+
+            <input type="radio" id="gender-female" name="gender" required />
+            <label for="gender-female"></label>
+            <label for="gender-female">Female</label>
+
+            <input type="radio" id="gender-other" name="gender" required />
+            <label for="gender-other"></label>
+            <label for="gender-other">Other</label>
+
+            <i></i>
+          </div>
+
+          <div class="inputBox-check">
+            <input type="checkbox" required id="check" />
+            <label for="check">&#10004;</label>
+            <span> Confidentiality agreement</span>
+
+            <i></i>
+          </div>
+
+          <button type="type" class="saveForm fw-7" id="saveBtn" disabled>
+            SIGN IN
+          </button>
+          <div class="link fw-7 font-sm">
+            <a>Forget Password</a>
+          </div>
+
+          <div class="bt-theme-wrapper">
+            <button class="btn bt-1" id="btn-1"></button>
+            <button class="btn bt-2" id="btn-2"></button>
+            <button class="btn bt-3" id="btn-3"></button>
+            <button class="btn bt-4" id="btn-4"></button>
+            <button class="btn bt-5" id="btn-5"></button>
+            <button class="btn bt-6" id="btn-6"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script src="js/script.js"></script>
+  <script src="js/theme.js"></script>
+</html>
