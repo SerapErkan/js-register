@@ -376,6 +376,9 @@ input[type="checkbox"]:checked + label {
   .inputBox-radio input ~ label {
     padding-left: 40px;
   }
+  .inputBox-check {
+    font-size: 1.2rem;
+  }
 }
 /* transform-origin: bottom right; dönüşüm yönünün belirler */
 /* "inset" özelliği, bir kutunun iç içe geçmiş bir görünüm kazanmasını sağlar */
