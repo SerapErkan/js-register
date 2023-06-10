@@ -1,0 +1,134 @@
+/* background colors */
+.bg-theme-1 {
+  background-color: var(--theme-1);
+}
+.bg-theme-2 {
+  background-color: var(--theme-2);
+}
+.bg-theme-3 {
+  background-color: var(--theme-3);
+}
+
+.bg-white-sm {
+  background-color: var(--whitesmoke-color);
+}
+.bg-dark {
+  background-color: var(--dark-color);
+}
+.bg-white {
+  background-color: var(--light-color);
+}
+
+/* text colors */
+.text-dark {
+  color: var(--dark-color);
+}
+.text-theme {
+  color: var(--theme-1);
+}
+.text-white {
+  color: var(--light-color);
+}
+.text-white-sm {
+  color: var(--whitesmoke-color);
+}
+.text-grey {
+  color: var(--grey-color);
+}
+
+/* text stylings */
+.text-center {
+  text-align: center;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/* fonts sizes */
+.font-sm {
+  font-size: 1.4rem !important;
+}
+.font-md {
+  font-size: 1.8rem !important;
+}
+.font-lg {
+  font-size: 2.4rem !important;
+}
+.font-xl {
+  font-size: 4rem !important;
+}
+
+/* font weights */
+.fw-5 {
+  font-weight: 500 !important;
+}
+.fw-6 {
+  font-weight: 600 !important;
+}
+.fw-7 {
+  font-weight: 700 !important;
+}
+
+.text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* layout stylings */
+.container {
+  max-width: calc(1145px - 20px);
+  padding: 0 2rem;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.flex {
+  /* Safari */
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  /* Internet Explore */
+  display: -webkit-box;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid {
+  display: grid;
+}
+
+/* padding and margins */
+.py-4 {
+  padding: 4rem 0;
+}
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/* section title stylings */
+.section-title {
+  text-transform: capitalize;
+  font-size: 3.6rem;
+  text-align: center;
+}
+.section-title h2 {
+  margin-bottom: 2.5rem;
+}
+
+/* media queries */
+@media (min-width: 678px) {
+  .py-4 {
+    padding: 8rem 0;
+  }
+  .section-title h2 {
+    margin-bottom: 4.2rem;
+  }
+}

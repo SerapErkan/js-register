@@ -1,0 +1,370 @@
+/* variables */
+:root {
+  --nunito-font: "Nunito Sans", sans-serif;
+  --montserrat-font: "Montserrat", sans-serif;
+
+  --theme-1: #1e90ff;
+  --whitesmoke-color: #f8f1f1;
+  --grey-color: #8b8888;
+  --dark-color: #141414;
+  --light-color: #fff;
+  --transition: all 0.5s ease-in-out;
+  --gradient: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+  /*yumuşak kaydırma efekt*/
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-family: var(--montserrat-font);
+  color: var(--dark-color);
+  opacity: 0.8;
+
+  /* img */
+  background-image: url("../../images/img2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  transform: scale(1);
+  transition: var(--transition);
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: var(--transition);
+}
+img:hover {
+  transform: scale(1.1);
+}
+
+i {
+  margin-right: 2rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  font-family: var(--nunito-font);
+  line-height: 1.2;
+}
+input {
+  font-size: large;
+  color: var(--theme-1);
+}
+
+.box {
+  position: relative;
+  width: 500px;
+  height: 890px;
+  border-radius: 70px 5px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4),
+    0 8px 30px 0 rgba(2, 2, 2, 0.904);
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 890px;
+  top: -50%;
+  left: -50%;
+  background: linear-gradient(60deg, transparent, var(--theme-1), #ecce6b);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 890px;
+  top: -50%;
+  left: -50%;
+  background: linear-gradient(60deg, transparent, var(--theme-1), #ecce6b);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+form {
+  position: absolute;
+  inset: 3px;
+  border-radius: 70px 5px;
+  background: #0a0a0a;
+  z-index: 10;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bt-theme-wrapper {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: calc(50% - 85px);
+  width: 150px;
+  height: 30px;
+}
+.btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.bt-1 {
+  background-color: #1e90ff;
+}
+.bt-2 {
+  background-color: #ab45f0;
+}
+.bt-3 {
+  background-color: #019c35;
+}
+.bt-4 {
+  background-color: #ff3030;
+}
+.bt-5 {
+  background-color: #fc3a74;
+}
+.bt-6 {
+  background-color: #e07015;
+}
+
+.inputBox {
+  position: relative;
+  width: 400px;
+  margin-top: 10px;
+}
+.inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--theme-1);
+  z-index: 10;
+  letter-spacing: 0.05em;
+}
+
+.saveForm {
+  background-color: var(--theme-1);
+  color: #fff;
+  border-radius: 20px;
+  width: 200px;
+  margin: auto;
+  padding: 15px;
+}
+.saveForm:disabled {
+  opacity: 0.4;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  color: #8f8f8f;
+  transition: var(--transition);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #8f8f8f;
+  font-size: 0.9em;
+  transform: translateX(-5px) translateY(-30px);
+}
+
+.inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--theme-1);
+  height: 2px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
+  /* height: 44px; */
+}
+
+b {
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  transition: var(--transition);
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.rePassword {
+  display: none;
+}
+
+.inputBox-radio {
+  margin-top: 10px;
+  color: #8f8f8f;
+}
+.inputBox-radio span {
+  margin-right: 20px;
+}
+.inputBox-radio label {
+  margin-right: 5px;
+}
+/* /***radio */
+.inputBox-check input[type="checkbox"] {
+  margin-top: 10px;
+  opacity: 0;
+}
+input[type="radio"] {
+  opacity: 0;
+}
+
+input[type="radio"] + label {
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+input[type="radio"] + label::before {
+  position: absolute;
+  content: " ";
+  width: 18px;
+  height: 18px;
+  left: 0;
+  top: 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+input[type="radio"] + label::after {
+  position: absolute;
+  content: " ";
+  width: 12px;
+  height: 12px;
+  left: 4px;
+  top: 4px;
+  border-radius: 50%;
+}
+
+input[type="radio"]:hover + label::before {
+  box-shadow: 1px 0px 8px 2px var(--light-color);
+}
+input[type="radio"]:checked + label::after {
+  background-color: var(--theme-1);
+}
+
+/* check input özelleştirme  */
+
+.inputBox-check {
+  margin-top: 30px;
+  color: #8f8f8f;
+}
+
+.inputBox-check input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"] + label {
+  color: transparent;
+  cursor: pointer;
+  position: relative;
+  margin-right: 30px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 0 4px;
+}
+input[type="checkbox"] + label::before {
+  position: absolute;
+  content: " ";
+  width: 18px;
+  height: 18px;
+  left: 0;
+  top: 0;
+  border: 2px solid #8f8f8f;
+}
+
+input[type="checkbox"] + label::after {
+  position: absolute;
+  content: " ";
+  width: 18px;
+  height: 18px;
+  left: 4px;
+  top: 1px;
+}
+
+input[type="checkbox"]:hover + label::before {
+  box-shadow: 1px 0px 8px 2px var(--light-color);
+}
+input[type="checkbox"]:checked + label {
+  color: var(--theme-1);
+  font-size: medium;
+  font-weight: 900;
+  padding-left: 2px;
+}
+
+.link {
+  color: #8f8f8f;
+  display: flex;
+  justify-content: start;
+}
+.link:hover {
+  color: var(--theme-1);
+}
+
+.bold {
+  text-decoration: line-through;
+  margin-top: 10px;
+  background-color: var(--theme-1);
+  display: block;
+}
+.error-message {
+  text-decoration: none;
+}
+.errDiv {
+  display: none;
+}
+/* transform-origin: bottom right; dönüşüm yönünün belirler */
+/* "inset" özelliği, bir kutunun iç içe geçmiş bir görünüm kazanmasını sağlar */
