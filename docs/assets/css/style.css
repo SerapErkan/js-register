@@ -366,5 +366,15 @@ input[type="checkbox"]:checked + label {
 .errDiv {
   display: none;
 }
+@media screen and (max-width: 600px) {
+  .inputBox-radio {
+    display: flex;
+    flex-direction: column;
+  }
+  .inputBox-radio input ~ label {
+    margin-left: 30px;
+    padding-left: 40px;
+  }
+}
 /* transform-origin: bottom right; dönüşüm yönünün belirler */
 /* "inset" özelliği, bir kutunun iç içe geçmiş bir görünüm kazanmasını sağlar */
