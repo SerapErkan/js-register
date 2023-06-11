@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 const saveBtn = document.getElementById('saveBtn');
-saveBtn.onclick = saveBtnForm;
+
 
 
 
@@ -81,72 +81,7 @@ function emailInputCheck(e) {
 }
 
 
-// function passwordInputCheck(e) {
-//     //passwor valid ise repassword gözüksün 
-//     //değilse gözükmesin 
 
-//     let isvalid = e.target.validity.valid;
-//     let repassword = document.getElementById("box-4");
-//     let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+{};:,<.>])[A-Za-z\d!@#$%^&*()\-_=+{};:,<.>]{5,}$/;
-
-//     var lowercaseRegex = /[a-z]/;
-//     var uppercaseRegex = /[A-Z]/;
-//     var digitRegex = /\d/;
-//     var specialCharRegex = /[!@#$%^&*()\-_=+{};:,<.>]/;
-//     let password = passwordInput.value;
-
-//     let boldEl0 = document.getElementById("be-0");
-//     let boldEl1 = document.getElementById("be-1");
-//     let boldEl2 = document.getElementById("be-2");
-//     let boldEl3 = document.getElementById("be-3");
-//     let boldEl4 = document.getElementById("be-4");
-
-   
-
-
-
-//     if (isvalid == true &&  passwordPattern.test(passwordInput.value)) {
-   
-//         let errDiv=document.getElementById("errDiv");
-//         errDiv.style.display="none";
-//         repassword.style.display = "block";
-
-//     }
-//     else {
-//         if (password.length > passwordInput.minLength) {
-//             boldEl0.classList.remove("error-message");
-//         }
-//         if (lowercaseRegex.test(password)) {
-//         boldEl1.classList.remove("error-message");
-//         }
-//         if (uppercaseRegex.test(password)) {
-//             boldEl2.classList.remove("error-message");
-//         }
-//         if (digitRegex.test(password)) {
-       
-//        boldEl3.classList.remove("error-message");
-//         }
-//         if (specialCharRegex.test(password)) {
-
-//           boldEl4.classList.remove("error-message");
-//         }
-     
-
-//         repassword.style.display = "none";
-//         //parola değişirse repassword silinmeli *b-4 sil
-//         let bElement = document.getElementById("b-4");
-//         bElement.innerHTML = "";
-//         bElement.className = "";
-
-//     }
-
-
-
-
-
-
-
-// }
 function passwordInputCheck(e) {
 
     let isvalid = e.target.validity.valid;
@@ -222,7 +157,7 @@ function repasswordInputCheck(event) {
         bElement.className = "";
     }
     else {
-        bElement.innerHTML = "* Passwords do not match" + "<br>" + event.target.validationMessage;
+        bElement.innerHTML = "*Parolalar uyuşmuyor" + "<br>" + event.target.validationMessage;
         bElement.className = "bg-theme-1";
     }
 
@@ -236,6 +171,47 @@ function passwordMatch() {
         return false;
     }
 }
+
+
+function hideShow() {
+
+  var hideIcon=document.getElementById("hideIcon");
+  console.log(hideIcon)
+  let type= passwordInput.type;
+  console.log(type);
+
+  hideIcon.className="";
+
+  if (type === "text") {
+    passwordInput.type = "password";
+    hideIcon.className = 'fa-solid fa-eye-slash ';
+    
+  } else {
+    passwordInput.type = "text";
+    hideIcon.className = 'fa-solid fa-eye text-theme';
+
+  }
+  }
+  function hideShowRePassword() {
+
+ 
+    var hideIcon=document.getElementById("hideIcon-2");
+    console.log(hideIcon)
+    let type= repasswordInput.type;
+    console.log(type);
+  
+    hideIcon.className="";
+  
+    if (type === "text") {
+      repasswordInput.type = "password";
+      hideIcon.className = 'fa-solid fa-eye-slash ';
+      
+    } else {
+      repasswordInput.type = "text";
+      hideIcon.className = 'fa-solid fa-eye text-theme';
+    }
+    }
+
 
 
 

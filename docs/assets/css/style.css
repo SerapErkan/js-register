@@ -213,7 +213,7 @@ form {
   transform: translateX(-5px) translateY(-30px);
 }
 
-.inputBox i {
+.inputBox .underline {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -223,8 +223,8 @@ form {
   border-radius: 4px;
   transition: var(--transition);
 }
-.inputBox input:valid ~ i,
-.inputBox input:focus ~ i {
+.inputBox input:valid ~ .underline,
+.inputBox input:focus ~ .underline {
   /* height: 44px; */
 }
 
@@ -306,7 +306,7 @@ input[type="radio"]:checked + label::after {
   opacity: 0;
 }
 
-input[type="checkbox"] + label {
+.inputBox-check input[type="checkbox"] + label {
   color: transparent;
   cursor: pointer;
   position: relative;
@@ -316,7 +316,7 @@ input[type="checkbox"] + label {
   height: 20px;
   padding: 0 4px;
 }
-input[type="checkbox"] + label::before {
+.inputBox-check input[type="checkbox"] + label::before {
   position: absolute;
   content: " ";
   width: 18px;
@@ -326,7 +326,7 @@ input[type="checkbox"] + label::before {
   border: 2px solid #8f8f8f;
 }
 
-input[type="checkbox"] + label::after {
+.inputBox-check input[type="checkbox"] + label::after {
   position: absolute;
   content: " ";
   width: 18px;
@@ -335,10 +335,10 @@ input[type="checkbox"] + label::after {
   top: 1px;
 }
 
-input[type="checkbox"]:hover + label::before {
+.inputBox-check input[type="checkbox"]:hover + label::before {
   box-shadow: 1px 0px 8px 2px var(--light-color);
 }
-input[type="checkbox"]:checked + label {
+.inputBox-check input[type="checkbox"]:checked + label {
   color: var(--theme-1);
   font-size: medium;
   font-weight: 900;
@@ -356,9 +356,14 @@ input[type="checkbox"]:checked + label {
 
 .bold {
   text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #141414;
+  text-decoration-style: solid;
+
   margin-top: 10px;
   background-color: var(--theme-1);
   display: block;
+  font-weight: 600;
 }
 .error-message {
   text-decoration: none;
@@ -366,6 +371,18 @@ input[type="checkbox"]:checked + label {
 .errDiv {
   display: none;
 }
+
+.hideBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: #8f8f8f;
+  cursor: pointer;
+  z-index: 80;
+}
+
 @media screen and (max-width: 760px) {
   .inputBox-radio {
     display: flex;

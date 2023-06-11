@@ -31,7 +31,7 @@
   <body>
     <div class="container flex text-white">
       <div class="box">
-        <form autocomplete="off">
+        <form autocomplete="off" onsubmit="saveBtnForm()">
           <h2 class="font-xl fw-6 text-theme text-center">Sign In</h2>
 
           <div class="inputBox" id="box-1">
@@ -39,31 +39,36 @@
               type="text"
               required
               minlength="3"
-              maxlength="10"
+              maxlength="20"
               id="input-1"
             />
             <span>User Name</span>
-            <i></i>
+            <i class="underline"></i>
           </div>
           <b id="b-1"></b>
 
           <div class="inputBox" id="box-2">
             <input type="email" required email id="input-2" />
             <span>Email</span>
-            <i></i>
+            <i class="underline"></i>
           </div>
           <b id="b-2"></b>
 
           <div class="inputBox" id="box-3">
+            <button  type="button" class="hideBtn" onclick="hideShow()" >
+              <i id="hideIcon" class="fa-solid fa-eye-slash"></i>
+            </button>
+            
+          </button>
             <input
               type="password"
               required
               minlength="5"
-              maxlength="8"
+              maxlength="20"
               id="input-3"
             />
             <span>Password</span>
-            <i></i>
+            <i class="underline"></i>
           </div>
           <div id="errDiv" class="errDiv">
             <b id="be-0" class="bold"
@@ -77,15 +82,18 @@
           </div>
 
           <div class="inputBox rePassword" id="box-4">
+               <button  type="button" class="hideBtn" onclick="hideShowRePassword()" >
+              <i id="hideIcon-2" class="fa-solid fa-eye-slash"></i>
+            </button>
             <input
               type="password"
               required
               minlength="5"
-              maxlength="8"
+              maxlength="20"
               id="input-4"
             />
             <span>Re-Password</span>
-            <i></i>
+            <i class="underline"></i>
           </div>
           <b id="b-4"></b>
 
@@ -115,7 +123,7 @@
             <i></i>
           </div>
 
-          <button type="type" class="saveForm fw-7" id="saveBtn" disabled>
+          <button type="text" class="saveForm fw-7" id="saveBtn" disabled>
             SIGN IN
           </button>
           <div class="link fw-7 font-sm">
